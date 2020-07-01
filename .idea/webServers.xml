@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="818f77c8-400d-425c-bdb2-9f80660ca56b" name="study" url="http://217.30.175.101">
+        <fileTransfer host="217.30.175.101" port="2202" rootFolder="/home/one/avtostart/user" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="2202" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="36f0ae4b-2f5b-4dab-b348-755811b9aa4d" name="ost" url="http://vatanparvar.uz">
+        <fileTransfer host="vatanparvar.uz" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
