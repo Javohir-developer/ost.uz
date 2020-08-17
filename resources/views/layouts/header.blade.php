@@ -1,25 +1,79 @@
-<header id="header" id="home">
-    <div class="container">
-        <div class="row align-items-center justify-content-between d-flex">
-            <div id="logo">
-                <a href="index.html"><img src="{{asset('front/img/logo.png')}}" alt="" title="" /></a>
+<div id="preloader"></div>
+
+<header>
+    <!-- header-area start -->
+    <div id="sticker" class="header-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+
+                    <!-- Navigation -->
+                    <nav class="navbar navbar-default">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".bs-example-navbar-collapse-1" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <!-- Brand -->
+                            <a class="navbar-brand page-scroll sticky-logo" href="{{ route('site.index') }}">
+                                <h1><span>O</span>ST</h1>
+                                <!-- Uncomment below if you prefer to use an image logo -->
+                                <!-- <img src="img/logo.png" alt="" title=""> -->
+                            </a>
+                        </div>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="active">
+                                    <a class="page-scroll" href="">@lang('home.Главная')</a>
+                                </li>
+                                <li>
+                                    <a class="page-scroll" href="#about">@lang('home.O нас')</a>
+                                </li>
+                                <li>
+                                    <a class="page-scroll" href="#services">@lang('home.Сервисы')</a>
+                                </li>
+                                {{--                                <li>--}}
+                                {{--                                    <a class="page-scroll" href="#team">@lang('home.Kоманда')</a>--}}
+                                {{--                                </li>--}}
+                                {{--                                <li>--}}
+                                {{--                                    <a class="page-scroll" href="#portfolio">@lang('home.Портфолио')</a>--}}
+                                {{--                                </li>--}}
+
+                                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">@lang('home.проектов')<span class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="{{ route('site.web') }}" >@lang('home.веб-приложения')</a></li>
+                                        <li><a href="{{ route('site.android') }}" >@lang('home.приложения для Androidm')</a></li>
+                                        <li><a href="{{ route('site.video') }}">@lang('home.3DM приложения')</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+{{--                                    <a class="page-scroll" href="#blog">@lang('home.Блог')</a>--}}
+                                </li>
+                                <li>
+                                    <a class="page-scroll" href="#contact">@lang('home.Kонтакт')</a>
+                                </li>
+
+
+                                <?php if (App::isLocale('uz')) { ?>
+                                <li><a href="locale/ru">Ru</a></li>
+                                <?php }elseif (App::isLocale('ru')){ ?>
+                                <li><a href="locale/uz">Uz</a></li>
+                                <?php } ?>
+
+
+                            </ul>
+                        </div>
+                        <!-- navbar-collapse -->
+                    </nav>
+                    <!-- END: Navigation -->
+                </div>
             </div>
-            <nav id="nav-menu-container">
-                <ul class="nav-menu">
-                    <li class="menu-active"><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#offer">we offer</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#work">Recent Work</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li class="menu-has-children"><a href="">Pages</a>
-                        <ul>
-                            <li><a href="generic.html">Generic</a></li>
-                            <li><a href="elements.html">Elements</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav><!-- #nav-menu-container -->
         </div>
     </div>
-</header><!-- #header -->
+    <!-- header-area end -->
+</header>

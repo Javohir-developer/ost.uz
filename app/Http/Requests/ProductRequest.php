@@ -26,9 +26,9 @@ class ProductRequest extends FormRequest
     {
         return [
             'title' => 'required|max:255',
-//            'body' => 'required|max:255',
-            'image' => 'required|mimes:jpeg,bmp,png',
-//            'firm_id' => 'required|max:255',
+            'about' => 'required|max:255',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'link' => 'required|max:255',
         ];
     }
 }

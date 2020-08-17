@@ -1,37 +1,51 @@
-<!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}">
+    <!DOCTYPE html>
+    <html lang="{{ app()->getLocale() }}">
     <head>
-    <title>LaravelDemo</title>
-    <link rel="stylesheet" type="text/css" href="{{asset('front/css/linearicons.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('front/css/font-awesome.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('front/css/bootstrap.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('front/css/magnific-popup.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('front/css/nice-select.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('front/css/animate.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('front/css/owl.carousel.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('front/css/main.css')}}">
+
+        <title>OST</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:site_name" content="ost.articles.uz">
+        <meta property="og:title" content="OST">
+        <meta property="og:locale" content="uz-UZ">
+        <meta property="og:type" content="page">
+        <meta property="og:url" content="http://ost.articles.uz/">
+        <meta property="og:image" content="{{URL::asset('files/img/logo.png')}}">
+        <meta property="og:description"  content="OST - Orient Software Team IT olamiga biz bilan birga.">
+        <link rel="shortcut icon" href="{{URL::asset('files/img/logo.png')}}" />
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{asset('files/lib/bootstrap/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('files/lib/nivo-slider/css/nivo-slider.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('files/lib/owlcarousel/owl.carousel.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('files/lib/owlcarousel/owl.transitions.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('files/lib/font-awesome/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('files/lib/animate/animate.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('files/lib/venobox/venobox.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('files/css/nivo-slider-theme.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('files/css/style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('files/css/responsive.css')}}">
     </head>
-        <body>
+
+        <body data-spy="scroll" data-target="#navbar-example">
             @include('layouts.header')
             @yield('content')
             @include('layouts.footer')
         </body>
-    <script type="text/javascript" src="{{asset('front/js/vendor/jquery-2.2.4.min.js')}}"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="{{asset('front/js/vendor/bootstrap.min.js')}}"></script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
-    <script type="text/javascript" src="{{asset('front/js/easing.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('front/js/hoverIntent.js')}}"></script>
-    <script type="text/javascript" src="{{asset('front/js/superfish.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('front/js/superfish.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('front/js/jquery.ajaxchimp.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('front/js/jquery.magnific-popup.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('front/js/owl.carousel.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('front/js/jquery.sticky.js')}}"></script>
-    <script type="text/javascript" src="{{asset('front/js/jquery.nice-select.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('front/js/parallax.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('front/js/waypoints.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('front/js/jquery.counterup.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('front/js/mail-script.js')}}"></script>
-    <script type="text/javascript" src="{{asset('front/js/main.js')}}"></script>
+
+    <script type="text/javascript" src="{{asset('files/lib/jquery/jquery.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('files/lib/bootstrap/js/bootstrap.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('files/lib/owlcarousel/owl.carousel.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('files/lib/venobox/venobox.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('files/lib/knob/jquery.knob.js')}}"></script>
+    <script type="text/javascript" src="{{asset('files/lib/wow/wow.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('files/lib/parallax/parallax.js')}}"></script>
+    <script type="text/javascript" src="{{asset('files/lib/easing/easing.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('files/lib/nivo-slider/js/jquery.nivo.slider.js')}}" ></script>
+    <script type="text/javascript" src="{{asset('files/lib/appear/jquery.appear.js')}}"></script>
+    <script type="text/javascript" src="{{asset('files/lib/isotope/isotope.pkgd.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('files/contactform/contactform.js')}}"></script>
+    <script type="text/javascript" src="{{asset('files/js/main.js')}}"></script>
 </html>

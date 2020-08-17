@@ -1,5 +1,5 @@
 {{--@extends('layouts.app')--}}
-@extends('adminlte::register')
+@extends('adminlte::auth.register')
 @section('content')
 <div class="container">
     <div class="row justify-content-center">

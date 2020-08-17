@@ -16,7 +16,6 @@ class ProductsController extends Controller
     public function index()
     {
         $products = Products::latest()->paginate(5);
-
         return view('products.index',compact('products'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
@@ -38,23 +37,13 @@ class ProductsController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-
-
-
-
-
-
     public function store(ProductRequest $request)
     {
-//        $validator = Validator::make($request->all(), $produc->rules);
-//        if ($validator->fails()) {
-//            return view('products.create')->withErrors($validator);
-//        }
 
         $produc = new Products();
         $produc->title   =   $request->title;
         $produc->about   =   $request->about;
-        $produc->firm_id =   1;
+        $produc->link    =   $request->link;
         if ($request->hasFile('image')){
             $image = $request->file('image');
             $image_name = ((int) (microtime(true))).$image->getClientOriginalName();
@@ -62,7 +51,7 @@ class ProductsController extends Controller
         }
         $produc->image = $image_name;
         $produc->save();
-        return redirect()->route('products.index')->with('success','Yangi mahsulot qushildi.');
+        return redirect()->route('products.index')->with('success','Yangi Ilova qushildi.');
     }
 
 
@@ -107,20 +96,11 @@ class ProductsController extends Controller
     public function update($id)
     {
         $products = Products::find($id);
-        $products->name = request('title');
-        $products->email = request('about');
+        $products->title = request('title');
+        $products->about = request('about');
+        $products->link = request('link');
         $products->save();
-
-
-        $test=new Products();
-        $validator = Validator::make($request->all(), $test->rules);
-        if ($validator->fails()) {
-            return view('create')->withErrors($validator);
-        }
-        $products->update($request->all());
-
-        return redirect()->route('products.index')
-            ->with('success','User updated successfully');
+        return redirect()->route('products.index')->with('success','User updated successfully');
     }
 
     /**

@@ -7,17 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 class Products extends Model
 {
     protected $table = 'products';
-    public $rules = [
-        'title' => 'max:255',
-        'body' => 'max:255',
-        'image' => 'image',
-        'firm_id' => 'max:255',
-
-    ];
     protected $fillable = [
+        'id',
         'title',
-        'body',
-        'firm_id',
+        'about',
+        'link',
+        'image',
 
     ];
     public $timestamps = false;

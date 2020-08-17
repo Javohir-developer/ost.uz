@@ -59,6 +59,16 @@
                     <button style="width: 100%; margin-top: 20px" type="submit" class="btn btn-primary">saqlash</button>
                 </div>
             </div>
+            <div class="col-sm-6">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                        <strong>link:</strong>
+                        <input type="text" name="link" class="form-control" placeholder="Name" required>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="col-sm-6"></div>
 
         </div>
         </div>

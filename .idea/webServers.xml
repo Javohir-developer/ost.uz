@@ -18,6 +18,22 @@
           <option name="port" value="21" />
         </fileTransfer>
       </webServer>
+      <webServer id="9d7f5bd8-c02c-4317-99fe-141a2bd6c30b" name="darkuz.ru" url="http://darkuz.ru">
+        <fileTransfer host="darkuz.ru" port="21" rootFolder="/www/darkuz.ru">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="5c86d6c6-1574-4920-9584-a1a8105a72e3" name="articls" url="http://articles.uz">
+        <fileTransfer host="articles.uz" port="21" rootFolder="/domains/ombor.articles.uz/public_html">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
 </project>
